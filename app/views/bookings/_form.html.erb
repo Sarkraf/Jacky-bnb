@@ -1,0 +1,16 @@
+<%= simple_form_for(model, url: vehicule_bookings_path) do |f| %>
+
+  <%= f.error_notification  %>
+
+  <div class="form-inputs">
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+<%# , as: :date_picker
+, as: :date_picker %>

@@ -1,0 +1,23 @@
+<%= simple_form_for(model) do |f| %>
+
+  <%= f.error_notification  %>
+
+  <div class="form-inputs">
+    <%= f.input :address %>
+    <%= f.input :category, collection: %w[Voiture Deux-roue Poids-lourd] %>
+    <%= f.input :brand %>
+    <%= f.input :model %>
+    <%= f.input :energy %>
+    <%= f.input :capacity %>
+    <%= f.input :color %>
+    <%= f.input :year %>
+    <%= f.input :license_plate %>
+    <%= f.input :price_per_h %>
+    <%= f.input :price_per_d %>
+    <%= f.input :description %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
