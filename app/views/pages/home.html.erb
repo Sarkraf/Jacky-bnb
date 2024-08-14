@@ -1,2 +1,24 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner">
+  <div class="container">
+    <h1></strong>Loue la voiture de tes rêves sans te ruiner!</h1>
+    <p>Pour un weekend, une journée ou seulement quelques heures.</p>
+    <%= link_to "Voir les annonces", vehicules_path, class: "btn-banner"%>
+  </div>
+</div>
+<%# ------------------------------------------------------------------- %>
+
+<div class="cards">
+  <div class="card-category", id="car">
+    Voitures
+  </div>
+
+  <div class="card-category", id="moto">
+    Deux-roues
+  </div>
+
+  <div class="card-category", id="truck">
+    Poids lourds
+  </div>
+</div>
+
+<%# ------------------------------------------------------------------- %>
