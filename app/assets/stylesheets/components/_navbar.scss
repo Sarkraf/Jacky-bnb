@@ -1,12 +1,46 @@
-.navbar-lewagon {
+.navbar-jacky {
   justify-content: space-between;
-  background: white;
+  background: rgb(212, 250, 253);
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-jacky .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-jacky .navbar-brand img {
   width: 40px;
+}
+
+.navbar-jacky #logo {
+  padding: -40px;
+  margin: -10px;
+  margin-left: 10px;
+  width: 90px;
+}
+
+.nav-item {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: -6px;
+}
+
+.avatar {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+#btn-login {
+  background-color: rgb(212, 250, 253);
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: -6px;
 }
