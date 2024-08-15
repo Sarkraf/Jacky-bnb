@@ -12,25 +12,23 @@
 }
 
 .navbar-jacky #logo {
-  padding: -40px;
-  margin: -10px;
-  margin-left: 10px;
+  margin-top: -20px;
+  margin-bottom: -20px;
+  // margin-left: 10px;
   width: 90px;
 }
 
 .nav-item {
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   background-color: white;
   border: 1px solid black;
   border-radius: 8px;
   margin-left: 10px;
   margin-right: 10px;
-  padding: -6px;
 }
 
 .avatar {
   margin-left: 10px;
-  margin-right: 10px;
+  // margin-right: 10px;
   width: 40px;
   height: 40px;
   border-radius: 50%;

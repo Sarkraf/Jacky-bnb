@@ -1,0 +1,9 @@
+<div class="card-vehicule">
+  <%= image_tag "camion.jpg", class: "card-image" %>
+  <div class="card-vehicule-body">
+    <h5 class="card-vehicule-title"><%= vehicule.brand %> <%= vehicule.model %></h5>
+    <p class="card-vehicule-text"><%= vehicule.capacity %> places</p>
+    <p class="card-vehicule-text"><%= vehicule.energy %></p>
+    <p class="card-vehicule-text"><strong>A partir de <%= vehicule.price_per_h %>€/h</strong></p>
+  </div>
+</div>
