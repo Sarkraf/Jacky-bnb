@@ -4,7 +4,7 @@
 <% @vehicules.each do |vehicule| %>
 
   <div style="display: flex">
-    <p style="margin-right: 15px;"><%= vehicule.description %></p>
+    <p style="margin-right: 15px;"><%= vehicule.brand %></p>
     <%= link_to "Réserver !" , new_vehicule_booking_path(vehicule) %>
   </div>
 
