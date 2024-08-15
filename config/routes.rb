@@ -12,10 +12,10 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users, only: %i[show] do
-    resources :bookings, only: %i[index]
+    resources :bookings, only: %i[index edit]
   end
 
-  resources :bookings, only: %i[destroy]
+  resources :bookings, only: %i[update destroy]
 
   resources :vehicules, only: %i[index show] do
     resources :bookings, only: %i[new create]

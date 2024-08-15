@@ -20,6 +20,17 @@ class BookingsController < ApplicationController
     end
   end
 
+  def edit
+    @user = current_user
+    @booking = Booking.find(params[:id])
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.update(status: params[:status])
+    redirect_to user_bookings_path(@booking.user), notice: 'Booking was successfully updated.'
+  end
+
   # def destroy
   #   @booking = Booking.find(params[:id])
   #   @booking.destroy

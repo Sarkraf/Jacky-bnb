@@ -7,6 +7,10 @@
     <p style="margin-left: 15px;">// Du : <%= booking.start_date %> au <%= booking.end_date %></p>
     <p style="margin-left: 15px;">// Prix : <%= (booking.end_date - booking.start_date).to_i * booking.vehicule.price_per_d %>€</p>
     <p style="margin-left: 15px; color: grey"><%= booking.status %></p>
+    <% if booking.status == "Pending" && booking.user == current_user %>
+      <%= link_to "Refuser", booking_path(booking, status: "Declined"), data: {turbo_confirm: "Voulez-vous vraiment refuser", turbo_method: :patch} %>
+      <%= link_to "Accepter", booking_path(booking, status: "Accepted"), data: {turbo_confirm: "Voulez-vous vraiment accepter", turbo_method: :patch} %>
+    <% end %>
     <%# link_to for destroy booking %>
     <%# <%= link_to "Annuler", booking_path(booking), method: :delete, data: { confirm: "Are you sure?" } %>
   </div>

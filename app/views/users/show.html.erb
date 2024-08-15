@@ -1,2 +1,11 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="jacky-container">
+  <h1>Mon Profil</h1>
+  <hr>
+  <h3><strong>Mes annonces</strong><h3></h3>
+
+  <div class="cards px-0">
+    <% @vehicules.each do |vehicule| %>
+        <%= render 'shared/card_vehicule', vehicule: vehicule  %>
+    <% end %>
+  </div>
+</div>
