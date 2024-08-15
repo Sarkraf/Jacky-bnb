@@ -1,11 +1,26 @@
+
+
+<div class="jacky-container">
 <h1>Toutes les annonces</h1>
 
 
-<% @vehicules.each do |vehicule| %>
-
-  <div style="display: flex">
-    <p style="margin-right: 15px;"><%= vehicule.description %></p>
-    <%= link_to "Réserver !" , new_vehicule_booking_path(vehicule) %>
+<%= simple_form_for :search, url: vehicules_path, method: :get, local: true do |f| %>
+  <div class="filter-bar">
+    <%= f.input :query, placeholder: "Rechercher...", label: false, class: "input" %>
+    <%= f.input :category, collection: %w[Categorie Voiture Deux-roue Poids-lourd], selected: "Categorie", label: false, class: "input" %>
+    <%= f.input :model, placeholder: "Modèle", label: false, class: "input" %>
+    <%= f.input :brand, placeholder: "Marque", label: false, class: "input" %>
+    <%= f.input :price_min, placeholder: "Prix minimum", label: false, class: "input" %>
+    <%= f.input :price_max, placeholder: "Prix maximum", label: false, class: "input" %>
+    <%= f.submit "Rechercher", class: "submit-button"%>
   </div>
-
 <% end %>
+
+  <div class="cards px-0">
+    <% @vehicules.each do |vehicule| %>
+    <%= link_to vehicule_path(vehicule), class: "link_to" do %>
+      <%= render 'card', vehicule: vehicule %>
+    <%end %>
+    <% end %>
+  </div>
+</div>
