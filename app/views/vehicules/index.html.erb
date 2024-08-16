@@ -19,7 +19,7 @@
   <div class="cards px-0">
     <% @vehicules.each do |vehicule| %>
     <%= link_to vehicule_path(vehicule), class: "link_to" do %>
-      <%= render 'card', vehicule: vehicule %>
+      <%= render 'shared/card_vehicule', vehicule: vehicule %>
     <%end %>
     <% end %>
   </div>

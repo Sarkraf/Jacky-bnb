@@ -3,9 +3,16 @@
   <hr>
   <h3><strong>Mes annonces</strong><h3></h3>
 
-  <div class="cards px-0">
     <% @vehicules.each do |vehicule| %>
-        <%= render 'shared/card_vehicule', vehicule: vehicule  %>
+      <div class="card-vehicule-owner">
+        <%= render 'shared/card_vehicule', vehicule: vehicule %>
+
+          <% if vehicule.user == current_user %>
+            <%= button_to "Modifier", edit_vehicule_path(vehicule), method: :get, class: "edit-btn" %>
+            <%= button_to "Supprimer", vehicule_path(vehicule), method: :delete, data: { turbo_confirm: "Êtes-vous sûr de vouloir supprimer ce véhicule ?" },class: "delete-btn" %>
+          <% end %>
+
+      </div>
     <% end %>
-  </div>
+
 </div>

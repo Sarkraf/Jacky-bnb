@@ -1,7 +1,8 @@
 class BookingsController < ApplicationController
 
   def index
-    @bookings = current_user.bookings
+    @user_bookings = Booking.where(user_id: current_user.id)
+    @owner_bookings = Booking.where(vehicule: current_user.vehicules)
   end
 
   def new

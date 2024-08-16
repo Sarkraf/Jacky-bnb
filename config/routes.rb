@@ -11,17 +11,18 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :users, only: %i[show] do
+  resources :users, only: %i[show], path: 'profile' do
     resources :bookings, only: %i[index edit]
   end
 
   resources :bookings, only: %i[update destroy]
+
+  resources :vehicules, only: %i[new create edit update destroy]
 
   resources :vehicules, only: %i[index show] do
     resources :bookings, only: %i[new create]
   end
 
 
-  resources :vehicules, only: %i[new create]
 
 end

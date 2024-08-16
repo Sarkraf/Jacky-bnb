@@ -1,0 +1,5 @@
+<% if current_user != vehicule.user %>
+  <%= link_to "Réserver", new_vehicule_booking_path(@vehicule) %>
+<% end %>
+
+<%# use with <%= render "btn_booking", vehicule: @vehicule %>

@@ -23,6 +23,17 @@ class VehiculesController < ApplicationController
     end
   end
 
+  def edit
+    @vehicule = Vehicule.find(params[:id])
+
+  end
+
+  def destroy
+    @vehicule = Vehicule.find(params[:id])
+    @vehicule.destroy
+    redirect_to user_path(current_user)
+  end
+
   private
 
   def vehicule_params
