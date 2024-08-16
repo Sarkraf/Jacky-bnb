@@ -6,12 +6,13 @@
 
 <%= simple_form_for :search, url: vehicules_path, method: :get, local: true do |f| %>
   <div class="filter-bar">
-    <%= f.input :query, placeholder: "Rechercher...", label: false, class: "input" %>
     <%= f.input :category, collection: %w[Categorie Voiture Deux-roue Poids-lourd], selected: "Categorie", label: false, class: "input" %>
-    <%= f.input :model, placeholder: "Modèle", label: false, class: "input" %>
     <%= f.input :brand, placeholder: "Marque", label: false, class: "input" %>
-    <%= f.input :price_min, placeholder: "Prix minimum", label: false, class: "input" %>
-    <%= f.input :price_max, placeholder: "Prix maximum", label: false, class: "input" %>
+    <%= f.input :model, placeholder: "Modèle", label: false, class: "input" %>
+    <%= f.input :energy, collection: %w[Carburant Essence Diesel Electrique GPL Hybride], selected: "Energie", label: false, class: "input" %>
+    <%= f.input :capacity, placeholder: "Capacité", input_html: { type: 'number' },label: false, class: "input" %>
+    <%# <%= f.input :price_min, placeholder: "Prix minimum", label: false, class: "input" %>
+    <%# <%= f.input :price_max, placeholder: "Prix maximum", label: false, class: "input" %>
     <%= f.submit "Rechercher", class: "submit-button"%>
   </div>
 <% end %>

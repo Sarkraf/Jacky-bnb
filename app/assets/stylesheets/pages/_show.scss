@@ -83,7 +83,7 @@ ul {
 .owner-card {
   width: 26%;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   background: rgb(255, 238, 251);
   box-shadow: 0 0 6px rgba(255, 151, 215, 0.74);
   padding: 2vh;
@@ -104,4 +104,23 @@ ul {
 
 .btn-profil {
   color: black;
+
+}
+
+.owner-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.owner-avatar {
+  margin-right: 3vh;
+  margin-left: -3vh;
+}
+
+.user-info {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

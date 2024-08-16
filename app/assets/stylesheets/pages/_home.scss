@@ -40,7 +40,7 @@
 .card-category {
   background-size: cover;
   background-position: center;
-  height: 180px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,6 +66,7 @@
 }
 
 .cards {
+  height: 40vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
