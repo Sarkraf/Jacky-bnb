@@ -1,3 +1,67 @@
-<h1>Détails du véhicule</h1>
 
-<%= render "btn_booking", vehicule: @vehicule %>
+
+  <div class="jacky-container">
+<div class="infos-card">
+  <div class ="imgs">
+    <div>
+      <%= image_tag "moto",  class: "main-img" %>
+    </div>
+    <div style="display: flex; flex-direction: column">
+      <%= image_tag "voiture", class: "side-imgs" %>
+      <%= image_tag "camion", class: "side-imgs" %>
+    </div>
+  </div>
+  <div class="vehicule-title">
+    <h2><strong><%= @vehicule.brand %> <%= @vehicule.model %></strong></h2>
+  </div>
+
+  <div>
+    <p><%= @vehicule.description %></p>
+  </div>
+
+  <div class= "infos-container">
+    <div class="caracteristics-card">
+      <ul>
+          <li>Catégorie  <strong><%= @vehicule.category %></strong></li>
+          <li>Année  <strong><%= @vehicule.year %></strong></li>
+          <li>Couleur  <strong><%= @vehicule.color %></strong></li>
+          <li>Energie  <strong><%= @vehicule.energy %></strong></li>
+        </ul>
+        <div>
+          <div class="capacity">
+            <i class="fa-solid fa-user"></i>
+            <%= @vehicule.capacity %>
+          </div>
+          </div>
+    </div>
+    <div class= "owner-card">
+      <div>
+        <div class= "avatar">
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
+        </div>
+        <div class="owner">
+          <%= @vehicule.user.first_name %>
+          <%= @vehicule.user.last_name %>
+        </div>
+      </div>
+      <p>Nombre de véhicules <strong><%= @vehicule.user.vehicules.count %></strong></p>
+
+      <div class="btn-container">
+        <%= link_to "Voir le profil", user_path(@vehicule.user), class: "link_to btn-profil"%>
+      </div>
+    </div>
+
+
+    </div>
+
+
+  </div>
+
+    <div class="btn-container">
+      <%= render "btn_booking", vehicule: @vehicule %>
+
+    </div>
+  </div>
+
+    </div>
+</div>
