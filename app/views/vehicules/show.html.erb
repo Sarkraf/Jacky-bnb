@@ -37,7 +37,7 @@
     <div class= "owner-card">
       <div>
         <div class= "avatar">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
+          <%= image_tag @vehicule.user.image_url, class: "avatar", alt: "dropdown menu" %>
         </div>
         <div class="owner">
           <%= @vehicule.user.first_name %>
