@@ -29,6 +29,9 @@ gem "jbuilder"
 # Add devise gem for user authentication
 gem "devise"
 
+# Add cloudinary gem for image upload
+gem "cloudinary"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
